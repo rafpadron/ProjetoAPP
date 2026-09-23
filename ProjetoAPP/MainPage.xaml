@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ProjetoAPP.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mi="http://www.aathifmahir.com/dotnet/2022/maui/icons"
+    Title="Sistema Acadêmico"
+    Background="#0D1B4C"
+    >
+
+    <Grid RowDefinitions="*,Auto">
+
+        <VerticalStackLayout
+            Grid.Row="0"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Spacing="15">
+
+            <Image Source="images.png"
+               WidthRequest="200"
+               HeightRequest="200"
+               Aspect="AspectFit" />
+
+            <Border BackgroundColor="#FFC107"> 
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+
+                <Label
+                    Text="Sistema Acadêmico"
+                    Padding="10"
+                    FontSize="28"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center" />
+            </Border>
+
+            <Label
+                Text="Selecione uma opção abaixo"
+                FontSize="16"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+
+        <Grid
+            Grid.Row="1"
+            ColumnDefinitions="*,*,*"
+            Padding="10"
+            ColumnSpacing="10">
+
+            <Button
+                Grid.Column="0"
+                Background="#00BCD4"
+                FontSize="15"
+                HeightRequest="70"
+                CornerRadius="10"
+                Clicked="Periodos_Clicked" 
+                ImageSource="{mi:FontAwesome Icon=Calendar}"
+                />
+
+            <Button
+                Grid.Column="1"
+                Background="#00BCD4"
+                FontSize="15"
+                HeightRequest="70"
+                CornerRadius="10"
+                Clicked="Cursos_Clicked" 
+                ImageSource="{mi:FontAwesome Icon=RectangleList}"
+                />
+
+            <Button
+                Grid.Column="2"
+                Background="#00BCD4"
+                FontSize="15"
+                HeightRequest="70"
+                CornerRadius="10"
+                Clicked="Disciplinas_Clicked"
+                ImageSource="{mi:FontAwesome Icon=Bookmark}"
+                />
+
+
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

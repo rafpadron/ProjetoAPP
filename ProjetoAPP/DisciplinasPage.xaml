@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ProjetoAPP.DisciplinasPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mi="http://www.aathifmahir.com/dotnet/2022/maui/icons"
+    Title="Disciplinas"
+    Background="#0D1B4C">
+
+    <Grid
+        RowDefinitions="Auto,*,Auto"
+        Padding="15">
+
+        <SearchBar
+            Grid.Row="0"
+            TextColor="Black"
+            BackgroundColor="White"
+            Placeholder="Pesquisar disciplina..."
+            Margin="0,0,0,10" />
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+            <Image Source="luffy.png"
+               WidthRequest="150"
+               HeightRequest="150"
+               Aspect="AspectFit" />
+
+            <Label
+                Text="Não tem Disciplinas Cadastrados."
+                FontSize="18"
+                TextColor="White"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center" />
+
+
+        </VerticalStackLayout>
+
+        <Grid
+            Grid.Row="2"
+            ColumnDefinitions="*,*,*"
+            ColumnSpacing="10"
+            Padding="0,10,0,0">
+
+            <Button
+    Grid.Column="0"
+    Background="#FFC107"
+    Text="Inserir"
+    TextColor="Black"
+    HeightRequest="55"
+    CornerRadius="10"
+    Clicked="Inserir_Clicked" 
+    ImageSource="{mi:FontAwesome Icon=PenToSquare}"
+    />
+
+            <Button
+    Grid.Column="1"
+      Background="#FFC107"
+    Text="Alterar"
+    TextColor="Black"
+    HeightRequest="55"
+    CornerRadius="10"
+    Clicked="Alterar_Clicked"
+    ImageSource="{mi:FontAwesome Icon=Clone}"/>
+
+            <Button
+    Grid.Column="2"
+      Background="#FFC107"
+    Text="Excluir"
+    TextColor="Black"
+    HeightRequest="55"
+    CornerRadius="10"
+    Clicked="Excluir_Clicked" 
+    ImageSource="{mi:FontAwesome Icon=FaceSadCry}"/>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
